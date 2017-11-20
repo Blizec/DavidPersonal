@@ -20,7 +20,7 @@ public class PWGens {
 	    }
 	    
 	    while(true){
-			String Input = JOptionPane.showInputDialog(null, "How many characters do you want for your PW? 8-26");
+			String Input = JOptionPane.showInputDialog(null, "How many characters do you want for your PW? 8-26", JOptionPane.PLAIN_MESSAGE);
 			int NMR = Integer.valueOf(Input);
 				if(NMR >= 8 && NMR <= 26 ){
 					PW = PW.substring(0, NMR);
@@ -35,7 +35,7 @@ public class PWGens {
         RS.setLineWrap(true);
         RS.setCaretPosition(0);
         RS.setEditable(false);
-        JOptionPane.showMessageDialog(null, new JScrollPane(RS), "New Password", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, new JScrollPane(RS), "New Password", JOptionPane.PLAIN_MESSAGE);
 	    
 	}
 
