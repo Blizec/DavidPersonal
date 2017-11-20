@@ -1,7 +1,5 @@
 package TextToBinary;
 
-import java.util.Scanner;
-
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
