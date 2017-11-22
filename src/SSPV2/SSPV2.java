@@ -14,13 +14,11 @@ public class SSPV2 {
 		
 		//Wins
 		String wins = new String(Files.readAllBytes(Paths.get("src/SSPV2/wins.txt")));
+		//Losses
 		String losses = new String(Files.readAllBytes(Paths.get("src/SSPV2/losses.txt")));
 		
         int win = Integer.parseInt(wins);
         int loss = Integer.valueOf(losses);
-		
-        //int win = 0;
-		//int loss = 0;
 		
 		Random RG = new Random();
 		
