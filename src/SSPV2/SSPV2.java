@@ -1,16 +1,28 @@
 package SSPV2;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Random;
 
 import javax.swing.JOptionPane;
 
 public class SSPV2 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
+		
+		//Wins
+		String wins = new String(Files.readAllBytes(Paths.get("src/SSPV2/wins.txt")));
+		String losses = new String(Files.readAllBytes(Paths.get("src/SSPV2/losses.txt")));
+		
+        int win = Integer.parseInt(wins);
+        int loss = Integer.valueOf(losses);
+		
+        //int win = 0;
+		//int loss = 0;
 		
 		Random RG = new Random();
-		int win = 0;
-		int loss = 0;
 		
 		JOptionPane.showMessageDialog(null, "Dax att spela sten sax påse.");
 		
@@ -55,6 +67,19 @@ public class SSPV2 {
 					JOptionPane.showMessageDialog(null, "Ni både valde påse");
 				}
 			}
+			
+			//Saving score
+			String winz = Integer.toString(win);
+			String lossez = Integer.toString(loss);
+			
+			PrintWriter out = new PrintWriter("src/SSPV2/wins.txt");
+			  out.print(winz);
+			  out.close();
+			  
+			PrintWriter out2 = new PrintWriter("src/SSPV2/losses.txt");
+			  out2.print(lossez);
+			  out2.close();
+			
 		}	
 	}
 }
