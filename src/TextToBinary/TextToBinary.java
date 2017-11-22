@@ -30,5 +30,4 @@ public class TextToBinary {
 	        JOptionPane.showMessageDialog(null, new JScrollPane(RS), "Binary", JOptionPane.PLAIN_MESSAGE);
 		  
 	}
-
 }
